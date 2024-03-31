@@ -449,16 +449,9 @@ div#turn-off.close:before, div#turn-off.close:after {
 	50% { opacity: 0;}
 }
 
-
-
-
-
-
-
-
 #closing {
-	width: 100vw;
-	height: 100vh;
+	/* width: 100vw;
+	height: 100vh; */
 	left: 0;
 	position: absolute;
 }
