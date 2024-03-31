@@ -10,7 +10,9 @@
 </head>
 <body>
     <canvas></canvas>
-    
+    <button id="play" style="background-color: white; width: 35px; height: 25px;
+    color: forestgreen; position: absolute; top:10px; left: 47%;" onclick="toggleAudio()">
+    <img id="volumeIcon" width="16" height="16" src="./mute.jpg" alt=""></button>
     <h1 aria-label="Sarah Fossheim">
       <span aria-hidden="true">
         <span style="--index: 1s">I</span>
@@ -35,19 +37,25 @@
         <span style="--index: 2.3s">O</span>
       </span>
     
-      <audio src="music.mp3" autoplay controls hidden>
+      <audio id="musicplayer" src="music.mp3" autoplay controls hidden>
       </audio>
     
       <script>
-        
         function toggleAudio() {
-            var audio = document.getElementById('musicplayer');
-            if (audio.paused) {
-                audio.play();
-            } else {
-                audio.pause();
-            }
+        var audio = document.getElementById('musicplayer');
+        var button = document.getElementById('play');
+        var volumeIcon = document.getElementById('volumeIcon');
+
+        if (audio.paused) {
+            audio.play();
+            button.style.color = 'forestgreen';
+            volumeIcon.src = './img/volume.jpg';
+        } else {
+            audio.pause();
+            button.style.color = 'red';
+            volumeIcon.src = './img/mute.jpg';
         }
+    }
     </script>
     <script src="main2.js"></script>
 </body>
