@@ -78,7 +78,6 @@ body{
   }
 
   audio {
-    
     position: absolute;
     top: 105%;
     right: 44%;
@@ -105,7 +104,7 @@ body{
   @media (max-width: 480px) {
     h1 {
       position: relative;
-      top: 575px;
+      top: 500px;
     }
   }
   
